@@ -10,6 +10,7 @@ import (
 	"github.com/madhusudhannsn/go-web-app/app/routes"
 	"github.com/madhusudhannsn/go-web-app/app/utils/db"
 	"github.com/madhusudhannsn/go-web-app/app/utils/logger"
+	"github.com/madhusudhannsn/go-web-app/app/utils/config"
 )
 
 func main() {
