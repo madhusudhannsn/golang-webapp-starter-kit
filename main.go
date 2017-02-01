@@ -13,7 +13,6 @@ import (
 )
 
 func main() {
-	Init()
 	router := httprouter.New()
 	router.GET("/", routes.Index)
 	logger.Info.Println("Starting the server on 3000 port")
@@ -21,9 +20,17 @@ func main() {
 }
 
 // Init : This function initializes the logger
-func Init() {
-	log.Println("Initializing the startups")
+func init() {
+	log.Println("Environment", os.Getenv("env"))
+	if os.Getenv("env") == "" {
+		os.Setenv("env", "local")
+	}
+	log.Println("Initializing the Prerequistes")
 	logger.Init(ioutil.Discard, os.Stdout, os.Stdout, os.Stderr)
+	confErr := config.Init()
+	if confErr != nil {
+		log.Fatal("Error occured while Loading configuration")
+	}
 	err, _ := db.GetSession()
 	if err != nil {
 		log.Fatal("Error occured while creating db session")
