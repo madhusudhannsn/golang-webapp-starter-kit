@@ -8,8 +8,8 @@ import (
 	"github.com/madhusudhannsn/go-web-app/app/utils/logger"
 )
 
-//Init : This method loads the configuration
-func Init() *error.AppError {
+//LoadConfig : This method loads the configuration
+func LoadConfig() *error.AppError {
 	logger.Info.Println("Initializing the configuration")
 	fileName := os.Getenv("env")
 	viper.SetConfigName(fileName)

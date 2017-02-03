@@ -9,7 +9,7 @@ type AppError struct {
 	err  error
 }
 
-func (e *AppError) error() string {
+func (e *AppError) Error() string {
 	return e.msg
 }
 

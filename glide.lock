@@ -1,10 +1,10 @@
-hash: e00cc16e720cb085f3b8b699b4eeb5931ee47a05373f440e1a3ae24270ec03c6
-updated: 2017-02-03T16:06:48.357828433+05:30
+hash: 3b68b9ae8c97f30602dc3b1ff3c280f436d85a589da09b273ca4983440f8b898
+updated: 2017-02-02T13:05:26.44004241+05:30
 imports:
 - name: github.com/fsnotify/fsnotify
   version: a904159b9206978bb6d53fcc7a769e5cd726c737
 - name: github.com/hashicorp/hcl
-  version: 88e9565e9965f4054f86c72ff1ad1bb50e560d6f
+  version: 372e8ddaa16fd67e371e9323807d056b799360af
   subpackages:
   - hcl/ast
   - hcl/parser
@@ -16,14 +16,6 @@ imports:
   - json/token
 - name: github.com/julienschmidt/httprouter
   version: 8c199fb6259ffc1af525cc3ad52ee60ba8359669
-- name: github.com/madhusudhannsn/go-web-app
-  version: 719265f6be137d04b61139c79678cc15ed63e98c
-  subpackages:
-  - app/routes
-  - app/utils/config
-  - app/utils/db
-  - app/utils/error
-  - app/utils/logger
 - name: github.com/magiconair/properties
   version: b3b15ef068fd0b17ddf408a23669f20811d194d2
 - name: github.com/mitchellh/mapstructure

@@ -8,9 +8,9 @@ import (
 
 	"github.com/julienschmidt/httprouter"
 	"github.com/madhusudhannsn/go-web-app/app/routes"
+	"github.com/madhusudhannsn/go-web-app/app/utils/config"
 	"github.com/madhusudhannsn/go-web-app/app/utils/db"
 	"github.com/madhusudhannsn/go-web-app/app/utils/logger"
-	"github.com/madhusudhannsn/go-web-app/app/utils/config"
 )
 
 func main() {
@@ -27,8 +27,8 @@ func init() {
 		os.Setenv("env", "local")
 	}
 	log.Println("Initializing the Prerequistes")
-	logger.Init(ioutil.Discard, os.Stdout, os.Stdout, os.Stderr)
-	confErr := config.Init()
+	logger.CreateLogger(ioutil.Discard, os.Stdout, os.Stdout, os.Stderr)
+	confErr := config.LoadConfig()
 	if confErr != nil {
 		log.Fatal("Error occured while Loading configuration")
 	}

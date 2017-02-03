@@ -12,8 +12,8 @@ var (
 	Error   *log.Logger
 )
 
-// Init : This initiaizes the all basic logging formats
-func Init(
+// CreateLogger : This initiaizes the all basic logging formats
+func CreateLogger(
 	traceHandle io.Writer,
 	infoHandle io.Writer,
 	warningHandle io.Writer,
