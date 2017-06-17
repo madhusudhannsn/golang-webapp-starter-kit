@@ -1,5 +1,5 @@
-# build-web-application-with-golang
-Boilerplate to create a golang Web apllication using Mongodb
+# golang-webapp-starter-kit
+Starter Kit to create a golang Web apllication using Mongodb
 
 Requirements
 ============
